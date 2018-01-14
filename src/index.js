@@ -1,6 +1,7 @@
 import RtmpServer from 'rtmp-server';
 import socketIo from 'socket.io';
 import { createServer } from 'http';
+import questions from './questions.json';
 
 const rtmpServer = new RtmpServer();
 
@@ -32,13 +33,22 @@ const server = createServer();
 const io = socketIo(server);
 
 let isAsking = false;
+let currentQuestion = 0;
+let broadcasterSocket;
 const socketsPlaying = [];
 const socketsToBeAdded = [];
 
-const sendQuestion = ({ text, options, correctAnswer }) => {
+const sendQuestion = () => {
+  if (isAsking) {
+    return;
+  }
+
+  const { text, options, correctAnswer } = questions[currentQuestion];
+
   isAsking = true;
   const votes = [0, 0, 0];
 
+  broadcasterSocket.emit('question', { text, options, correctAnswer });
   socketsPlaying.forEach((socket) => {
     socket.emit('question', { text, options }, (chosenAnswer) => {
       votes[chosenAnswer] += 1;
@@ -46,6 +56,7 @@ const sendQuestion = ({ text, options, correctAnswer }) => {
   });
 
   setTimeout(() => {
+    broadcasterSocket.emit('answer', votes);
     socketsPlaying.forEach((socket) => {
       socket.emit('answer', { votes, correctAnswer });
     });
@@ -56,19 +67,23 @@ const sendQuestion = ({ text, options, correctAnswer }) => {
       socketsPlaying.push(socket);
     }
     isAsking = false;
+    currentQuestion += 1;
   }, 20000);
 };
 
 io.on('connection', (socket) => {
-  (isAsking ? socketsToBeAdded : socketsPlaying).push(socket);
+  socket.on('is-player', () => {
+    (isAsking ? socketsToBeAdded : socketsPlaying).push(socket);
+  });
 
-  // setTimeout(() => {
-  //   sendQuestion({
-  //     text: 'who was the first prez',
-  //     options: ['me', 'u', 'a dog named blue'],
-  //     correctAnswer: 2,
-  //   });
-  // }, 2000);
+  socket.on('is-broadcaster', () => {
+    if (broadcasterSocket) {
+      broadcasterSocket.disconnect();
+    }
+
+    broadcasterSocket = socket;
+    broadcasterSocket.on('ask-question', sendQuestion);
+  });
 });
 
 server.listen(8080);
