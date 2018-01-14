@@ -1,6 +1,6 @@
 import RtmpServer from 'rtmp-server';
 import socketIo from 'socket.io';
-import { createServer } from 'https';
+import { createServer } from 'http';
 import questions from '../questions.json';
 
 const rtmpServer = new RtmpServer();
