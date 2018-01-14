@@ -1,110 +1,110 @@
 [
   {
-    "text": "What is x?",
+    "text": "From an early age, Lucy showed signs of delusional personality disorder.  She secretly believed her real parents were:",
     "options": [
-      "y",
-      "z",
-      "b"
+      "Hillary and Bill Clinton",
+      "A king and a queen",
+      "Ann and Lee Phillips"
     ],
     "correctAnswer": 1
   },
   {
-    "text": "What is x?",
+    "text": "Which dating app did Lucy use to meet Ryan?",
     "options": [
-      "y",
+      "Tinder",
+      "AdultFriendFinder",
+      "Bristlr"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "text": "What did Lucy call her stuffed Lion as a child?",
+    "options": [
+      "Tay-wo (Tail)",
+      "Thimba (Simba)",
+      "Ryan (Lion)"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "text": "What was the date of Lucy's first-ever Taco Tuesday?",
+    "options": [
+      "December 8th, 2015",
+      "October 13th, 2015",
+      "January 12th, 2016"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "text": "In which subject did Lucy minor in college?",
+    "options": [
+      "Art history",
+      "Sociology",
+      "None; she didn't have a minor"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "text": "During her year traveling after college, which of the following countries did Lucy not visit?",
+    "options": [
+      "Cambodia",
+      "Scotland",
+      "Sri Lanka"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "text": "Who was Lucy's favorite author in high school?",
+    "options": [
+      "Judi Picoult",
       "z",
       "b"
+    ],
+    "correctAnswer": 0
+  },
+  {
+    "text": "At what age did Lucy no longer insist on wearing dresses exclusively?",
+    "options": [
+      "Age 6",
+      "Age 8",
+      "Age 5"
     ],
     "correctAnswer": 1
   },
   {
-    "text": "What is x?",
+    "text": "Lucy’s only tattoo was inspired by a quote by which of the following writers?",
     "options": [
-      "y",
-      "z",
-      "b"
+      "Mark Twain",
+      "St. Ignacius Loyola",
+      "Judi Picoult"
     ],
     "correctAnswer": 1
   },
   {
-    "text": "What is x?",
+    "text": "Which of the following is NOT one of Lucy’s favorite Christmas songs?",
     "options": [
-      "y",
-      "z",
-      "b"
+      "All I Want For Christmas Is You",
+      "Happy Xmas (War Is Over)",
+      "Peace on Earth/Little Drummer Boy"
+    ],
+    "correctAnswer": 2
+  },
+  {
+    "text": "Which of Lucy’s family members once went with her on a secret mission at 2 A.M. to buy a Christmas tree?",
+    "options": [
+      "Her brother",
+      "Her father",
+      "Her mother"
     ],
     "correctAnswer": 1
   },
   {
-    "text": "What is x?",
+    "text": "Lucy is extremely our shit because:",
     "options": [
-      "y",
-      "z",
-      "b"
+      "She cares intensely about other people",
+      "She has an unwavering sense of self and values",
+      "All of the above"
     ],
-    "correctAnswer": 1
-  },
-  {
-    "text": "What is x?",
-    "options": [
-      "y",
-      "z",
-      "b"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "text": "What is x?",
-    "options": [
-      "y",
-      "z",
-      "b"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "text": "What is x?",
-    "options": [
-      "y",
-      "z",
-      "b"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "text": "What is x?",
-    "options": [
-      "y",
-      "z",
-      "b"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "text": "What is x?",
-    "options": [
-      "y",
-      "z",
-      "b"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "text": "What is x?",
-    "options": [
-      "y",
-      "z",
-      "b"
-    ],
-    "correctAnswer": 1
-  },
-  {
-    "text": "What is x?",
-    "options": [
-      "y",
-      "z",
-      "b"
-    ],
-    "correctAnswer": 1
+    "correctAnswer": 2
   }
 ]

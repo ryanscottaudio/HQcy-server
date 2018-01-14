@@ -1,5 +1,5 @@
-import socketIo from 'socket.io';
 import { createServer } from 'http';
+import socketIo from 'socket.io';
 import questions from '../questions.json';
 
 const server = createServer();
