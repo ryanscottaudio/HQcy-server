@@ -1,33 +1,6 @@
-import RtmpServer from 'rtmp-server';
 import socketIo from 'socket.io';
 import { createServer } from 'http';
 import questions from '../questions.json';
-
-const rtmpServer = new RtmpServer();
-
-rtmpServer.on('error', (err) => {
-  throw err;
-});
-
-rtmpServer.on('client', (client) => {
-  client.on('connect', () => {
-    console.log('connect', client.app);
-  });
-
-  client.on('play', ({ streamName }) => {
-    console.log('PLAY', streamName);
-  });
-
-  client.on('publish', ({ streamName }) => {
-    console.log('PUBLISH', streamName);
-  });
-
-  client.on('stop', () => {
-    console.log('rmtp client disconnected');
-  });
-});
-
-rtmpServer.listen(1935);
 
 const server = createServer();
 const io = socketIo(server);
