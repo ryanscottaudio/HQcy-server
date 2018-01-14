@@ -1,6 +1,6 @@
 import RtmpServer from 'rtmp-server';
 import socketIo from 'socket.io';
-import { createServer } from 'http';
+import { createServer } from 'https';
 import questions from './questions.json';
 
 const rtmpServer = new RtmpServer();
@@ -86,4 +86,4 @@ io.on('connection', (socket) => {
   });
 });
 
-server.listen(8080);
+server.listen();
