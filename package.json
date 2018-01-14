@@ -5,8 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf ./dist && babel ./src --out-dir ./dist && mkdir ./dist/videos",
-    "start": "npm run build && FFMPEG_PATH='../ffmpeg' node ./dist/index.js",
-    "lint": "eslint ."
+    "start": "npm run build && node ./dist/index.js",
+    "lint": "eslint .",
+    "postinstall": "bower install && grunt build"
   },
   "author": "",
   "license": "ISC",
