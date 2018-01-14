@@ -41,7 +41,7 @@ const sendQuestion = () => {
     }
     isAsking = false;
     currentQuestion += 1;
-  }, 20000);
+  }, 15000);
 };
 
 io.on('connection', (socket) => {
